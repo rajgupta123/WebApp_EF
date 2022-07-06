@@ -1,0 +1,30 @@
+﻿@model WebApp_EF.Models.UserModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+@if (Model != null)
+{
+    <h1>Id=@Model.Id</h1>
+    <h1>Name=@Model.Name</h1>
+    <h1>City=@Model.City</h1>
+    <h1>Mobile NUmber=@Model.Mobile_Number</h1>
+}
+else
+{
+    <h2>nodata Found</h2>
+}
+
+
+
+
+
+
+
+<form asp-action="Delete">
+    <input type="submit" value="Delete" class="btn btn-danger" /> |
+    <a asp-action="Index">Back to List</a>
+</form>
+
